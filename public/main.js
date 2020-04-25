@@ -1,7 +1,7 @@
-const main = () => {
-  if (document.querySelector('h1.hello-world')) {
-    document.querySelector('h1.hello-world').textContent = 'Hello, World!'
-  }
+const checkboxes = document.querySelectorAll('.input input[type="checkbox"]') 
+
+function handleCheck(event) {
+  console.log(event)
 }
 
-document.addEventListener('DOMContentLoaded', main)
+checkboxes.forEach(checkbox => checkbox.addEventListener('click', handleCheck))
